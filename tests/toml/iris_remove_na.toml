@@ -18,7 +18,7 @@
 [[steps]]
     operation = "remove_na"
     [steps.properties]
-    col = "*"
+    col = "Species"
 
 [[steps]]
     operation = "preview"

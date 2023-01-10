@@ -1,0 +1,19 @@
+[general]
+    name = "Missing steps operation"
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Test should failed as one of the steps is missing the operation key"
+
+
+[[steps]]
+operation = "read"
+[steps.properties]
+    path = "./tests/data/cars_semicolon.csv"
+    delimiter = ";"
+    header = true
+
+
+[[steps]]
+[steps.properties]
+    n= 10
+    sample= true

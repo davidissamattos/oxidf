@@ -1,0 +1,24 @@
+[general]
+    name = "Iris"
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Read and print the iris dataset from R"
+
+[[steps]]
+    operation = "read_csv"
+    [steps.properties]
+    path = "./tests/data/iris.csv"
+    delimiter = ","
+    header = true
+
+[[steps]]
+    operation = "filter_lt"
+    [steps.properties]
+    col = "Sepal.Width"
+    value= 3
+
+[[steps]]
+    operation = "preview"
+    [steps.properties]
+
+

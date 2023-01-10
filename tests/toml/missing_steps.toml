@@ -1,0 +1,6 @@
+[general]
+    name = "Missing steps"
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Test parsing when the steps are missing. Should fail"
+

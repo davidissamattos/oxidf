@@ -1,0 +1,17 @@
+#Missing name in general
+[general]
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Read and print the titanic dataset from R"
+
+[[steps]]
+operation = "read_csv"
+[steps.properties]
+    path = "./tests/data/titanic.csv"
+    delimiter = ","
+    header = true
+
+
+[[steps]]
+operation = "preview"
+[steps.properties]

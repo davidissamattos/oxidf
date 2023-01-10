@@ -1,0 +1,16 @@
+[general]
+    name = "Missing the properties of a step"
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Test parsing a pipeline with steps without properties. Should fail"
+
+[[steps]]
+operation = "read_csv"
+[steps.properties]
+    path = "./tests/data/iris.csv"
+    delimiter = ","
+    header = true
+
+#Missing the properities
+[[steps]]
+operation = "preview"

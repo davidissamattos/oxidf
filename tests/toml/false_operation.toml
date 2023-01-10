@@ -1,0 +1,18 @@
+[general]
+    name = "False operation"
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Test pipelines with operations that are not existent"
+
+[[steps]]
+operation = "wrong_operation"
+[steps.properties]
+    path = "./tests/data/titanic.csv"
+    delimiter = ","
+    header = true
+
+
+[[steps]]
+    operation = "preview"
+    [steps.properties]
+

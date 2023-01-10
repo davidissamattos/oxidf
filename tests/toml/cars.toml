@@ -1,0 +1,24 @@
+[general]
+    name = "Cars"
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Read and print the cars dataset from R"
+
+
+[[steps]]
+operation = "read_csv"
+[steps.properties]
+    path = "./tests/data/cars_semicolon.csv"
+    delimiter = ";"
+    header = true
+
+[[steps]]
+operation = "rename"
+[steps.properties]
+    col = "dist"
+    name = "Distance" 
+
+[[steps]]
+    operation = "preview"
+    [steps.properties]
+      

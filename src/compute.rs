@@ -78,8 +78,24 @@ pub fn compute_pipeline(pipeline: &Pipeline, messages: bool) {
                 let s: RemoveNAStep = RemoveNAStep::from(step, df);
                 df = s.execute().unwrap();
             }
+            "recode" => {
+                let s: RecodeStep = RecodeStep::from(step, df);
+                df = s.execute().unwrap();
+            }
+            "cast" => {
+                let s: CastStep = CastStep::from(step, df);
+                df = s.execute().unwrap();
+            }
             "anonymize" => {
                 let s: AnonymizeStep = AnonymizeStep::from(step, df);
+                df = s.execute().unwrap();
+            }
+            "pivot" => {
+                let s: PivotStep = PivotStep::from(step, df);
+                df = s.execute().unwrap();
+            }
+            "unique" => {
+                let s: UniqueStep = UniqueStep::from(step, df);
                 df = s.execute().unwrap();
             }
             //Output

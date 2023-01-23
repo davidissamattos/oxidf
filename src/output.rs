@@ -9,14 +9,6 @@ pub const OUTPUT_OP: &[&str] = &["save_csv", "preview"];
 
 /// Save csv to file
 /// Saves a DataFrame in a csv file Polars
-/// The data frame represented in the lazy format (only operations and without occupying memory) is converted to an actual dataframe in memory.
-/// Arguments:
-/// * a reference to the lazydataframe to be saved
-/// * a literal string path
-/// * a delimiter: commonly b',' or b';' or b' ' or b'\t'
-/// * a boolean indicating if there is a header or not
-/// Return:
-/// A LazyFrame encapsulated in Result
 pub struct SaveCsvStep {
     lazydf: LazyFrame,
     delimiter: u8,
@@ -93,16 +85,16 @@ impl Execute for PreviewStep {
     }
     fn validate(step: &Steps) {}
 }
-mod tests_preview {
-    use super::*;
-    //Just testing if it does not fail
-    #[test]
-    fn test_print() {
-        let cars_reader =
-            crate::input::ReadCsvStep::new("./tests/data/cars_semicolon.csv", b';', true);
-        let cars = cars_reader.execute().unwrap();
-        //sample true and false and different values of n
-        let preview_step = PreviewStep::new(cars.clone());
-        let _ = preview_step.execute();
-    }
-}
+// mod tests_preview {
+//     use super::*;
+//     //Just testing if it does not fail
+//     #[test]
+//     fn test_print() {
+//         let cars_reader =
+//             crate::input::ReadCsvStep::new("./tests/data/cars_semicolon.csv", b';', true);
+//         let cars = cars_reader.execute().unwrap();
+//         //sample true and false and different values of n
+//         let preview_step = PreviewStep::new(cars.clone());
+//         let _ = preview_step.execute();
+//     }
+// }

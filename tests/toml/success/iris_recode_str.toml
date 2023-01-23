@@ -1,0 +1,25 @@
+[general]
+    name = "Iris"
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Read and print the iris dataset from R"
+
+[[steps]]
+    operation = "read_csv"
+    [steps.properties]
+    path = "./tests/data/iris.csv"
+    delimiter = ","
+    header = true
+
+[[steps]]
+#Recoding only a few numerical values to a different value
+    operation = "recode"
+    [steps.properties]
+    col = "Species"
+    from = ["setosa", "versicolor", "virginica"]
+    to = ["Setosa", "Versicolor", "Virginica"]
+
+[[steps]]
+    operation = "preview"
+    [steps.properties]
+

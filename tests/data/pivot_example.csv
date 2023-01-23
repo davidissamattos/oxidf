@@ -1,0 +1,10 @@
+CarID,model,request,ts,parname,parvalue
+Car1,x1,r1,1,A,32
+Car1,x1,r1,1,B,p1
+Car1,x1,r2,1,A,33
+Car1,x1,r2,1,B,p2
+Car2,x2,r1,2,A,44
+Car2,x2,r1,2,B,p2
+Car2,x2,r2,2,A,44
+Car2,x2,r2,2,B,p3
+Car3,x1,r3,3,A,33

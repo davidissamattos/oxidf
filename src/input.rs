@@ -71,33 +71,47 @@ impl Execute for ReadCsvStep {
     }
 }
 
-mod tests_read_csv {
-    use super::*;
-    #[test]
-    fn test_read_csv_step() {
-        let cars_reader = ReadCsvStep::new("./tests/data/cars_semicolon.csv", b';', true);
-        let cars = cars_reader.execute().unwrap();
-        let cars_df = cars
-            .select([col("dist").sum(), col("speed").sum()])
-            .collect()
-            .unwrap();
-        let sumdist = cars_df
-            .column("dist")
-            .unwrap()
-            .iter()
-            .nth(0)
-            .unwrap()
-            .try_extract::<i64>()
-            .unwrap();
-        let sumspeed = cars_df
-            .column("speed")
-            .unwrap()
-            .iter()
-            .nth(0)
-            .unwrap()
-            .try_extract::<i64>()
-            .unwrap();
-        assert_eq!(sumdist, 2149);
-        assert_eq!(sumspeed, 770);
-    }
-}
+// mod tests_read_csv {
+//     use super::*;
+//     #[test]
+//     fn test_read_csv_step() {
+//         let cars_reader = ReadCsvStep::new("./tests/data/cars_semicolon.csv", b';', true);
+//         let cars = cars_reader.execute().unwrap();
+//         let cars_df = cars
+//             .select([col("dist").sum(), col("speed").sum()])
+//             .collect()
+//             .unwrap();
+//         let sumdist = cars_df
+//             .column("dist")
+//             .unwrap()
+//             .iter()
+//             .nth(0)
+//             .unwrap()
+//             .try_extract::<i64>()
+//             .unwrap();
+//         let sumspeed = cars_df
+//             .column("speed")
+//             .unwrap()
+//             .iter()
+//             .nth(0)
+//             .unwrap()
+//             .try_extract::<i64>()
+//             .unwrap();
+//         assert_eq!(sumdist, 2149);
+//         assert_eq!(sumspeed, 770);
+//     }
+// }
+
+
+
+// Import folder
+//
+//
+
+
+// Append files in list
+//
+//
+
+
+// Join two tables

@@ -1,0 +1,31 @@
+[general]
+    name = "Pivot example"
+    version = "0.0.1"
+    mantainer = "David Issa Mattos"
+    description = "Read pivot the example pivot data"
+
+
+[[steps]]
+operation = "read_csv"
+[steps.properties]
+    path = "./tests/data/pivot_example.csv"
+    delimiter = ","
+    header = true
+
+[[steps]]
+    operation = "preview"
+    [steps.properties]
+
+[[steps]]
+operation = "pivot"
+[steps.properties]
+    values = ["parvalue"]
+    index = ["CarID","ts", "request"]
+    columns = ["parname"]
+    aggregation = "first"
+    sort_columns = true
+
+[[steps]]
+    operation = "preview"
+    [steps.properties]
+      

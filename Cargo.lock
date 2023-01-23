@@ -839,6 +839,7 @@ version = "0.1.0"
 dependencies = [
  "clap",
  "polars",
+ "polars-ops",
  "rand",
  "serde",
  "serde_derive",

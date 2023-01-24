@@ -2,6 +2,7 @@ use crate::input::*;
 use crate::operations::*;
 use crate::output::*;
 use crate::steps::*;
+use crate::merge::*;
 use core::panic;
 use std::fs;
 use std::io;

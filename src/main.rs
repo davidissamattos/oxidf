@@ -2,6 +2,7 @@
 // Author: David Issa Mattos
 // Mantainer: David Issa Mattos
 mod compute;
+mod merge;
 mod input;
 mod operations;
 mod output;

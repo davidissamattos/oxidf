@@ -6,6 +6,7 @@ use crate::input::*;
 use crate::operations::*;
 use crate::output::*;
 use crate::steps::*;
+use crate::merge::*;
 use polars::prelude::*;
 
 ///Execute a pipeline
